@@ -5,7 +5,7 @@ class CreateMonsters < ActiveRecord::Migration[5.1]
       t.string :ac
       t.string :hp
       t.string :speed
-      t.string :image
+      t.text :image_data
 
       t.timestamps
     end

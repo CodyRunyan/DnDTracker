@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20181227175350) do
     t.string "ac"
     t.string "hp"
     t.string "speed"
-    t.string "image"
+    t.text "image_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
