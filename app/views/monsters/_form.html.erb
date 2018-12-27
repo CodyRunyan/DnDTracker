@@ -1,0 +1,42 @@
+<%= form_with(model: monster, local: true) do |form| %>
+  <% if monster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(monster.errors.count, "error") %> prohibited this monster from being saved:</h2>
+
+      <ul>
+      <% monster.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :monster_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ac %>
+    <%= form.text_field :ac, id: :monster_ac %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hp %>
+    <%= form.text_field :hp, id: :monster_hp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :speed %>
+    <%= form.text_field :speed, id: :monster_speed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :monster_image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
