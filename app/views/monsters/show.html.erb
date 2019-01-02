@@ -6,12 +6,12 @@
 </p>
 
 <p>
-  <strong>Ac:</strong>
+  <strong>AC:</strong>
   <%= @monster.ac %>
 </p>
 
 <p>
-  <strong>Hp:</strong>
+  <strong>HP:</strong>
   <%= @monster.hp %>
 </p>
 
@@ -22,7 +22,9 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @monster.image %>
+      <% if @monster.image.present? %>
+      <%= image_tag @monster.image_url(:large) %>
+    <% end %>
 </p>
 
 <%= link_to 'Edit', edit_monster_path(@monster) %> |

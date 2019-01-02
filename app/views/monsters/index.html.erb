@@ -6,9 +6,9 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Ac</th>
-      <th>Hp</th>
-      <th>Speed</th>
+      <th>AC</th>
+      <th>HP</th>
+      <th>Type</th>
       <th>Image</th>
       <th colspan="3"></th>
     </tr>
@@ -21,7 +21,9 @@
         <td><%= monster.ac %></td>
         <td><%= monster.hp %></td>
         <td><%= monster.speed %></td>
-        <td><%= monster.image %></td>
+      <% if monster.image.present? %>
+        <td><%= image_tag monster.image_url(:small) %></td>
+      <% end %>
         <td><%= link_to 'Show', monster %></td>
         <td><%= link_to 'Edit', edit_monster_path(monster) %></td>
         <td><%= link_to 'Destroy', monster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
