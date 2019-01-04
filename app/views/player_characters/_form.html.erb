@@ -1,0 +1,46 @@
+<%= form_with(model: player_character, local: true) do |form| %>
+  <% if player_character.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player_character.errors.count, "error") %> prohibited this player_character from being saved:</h2>
+
+      <ul>
+      <% player_character.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :character_name %>
+    <%= form.text_field :character_name, id: :player_character_character_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_name %>
+    <%= form.text_field :player_name, id: :player_character_player_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ac %>
+    <%= form.text_field :ac, id: :player_character_ac %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hp %>
+    <%= form.number_field :hp, id: :player_character_hp %>
+  </div>
+
+  <div class="field">
+    <% if player_character.image.present? %>
+      <%= image_tag player_character.image_url(:large) %>
+    <% end %>
+    <%= form.label :image %>
+    <%= form.hidden_field :image, value: form.object.cached_image_data %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -8,7 +8,7 @@
       <th>Name</th>
       <th>AC</th>
       <th>HP</th>
-      <th>Type</th>
+      <th>Tags</th>
       <th>Image</th>
       <th colspan="3"></th>
     </tr>
@@ -20,7 +20,7 @@
         <td><%= monster.name %></td>
         <td><%= monster.ac %></td>
         <td><%= monster.hp %></td>
-        <td><%= monster.speed %></td>
+        <td><%= monster.tags %></td>
       <% if monster.image.present? %>
         <td><%= image_tag monster.image_url(:small) %></td>
       <% end %>

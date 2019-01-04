@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Player Characters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Character name</th>
+      <th>Player name</th>
+      <th>Ac</th>
+      <th>Hp</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @player_characters.each do |player_character| %>
+      <tr>
+        <td><%= player_character.character_name %></td>
+        <td><%= player_character.player_name %></td>
+        <td><%= player_character.ac %></td>
+        <td><%= player_character.hp %></td>
+      <% if player_character.image.present? %>
+        <td><%= image_tag player_character.image_url(:small) %></td>
+      <% end %>
+        <td><%= link_to 'Show', player_character %></td>
+        <td><%= link_to 'Edit', edit_player_character_path(player_character) %></td>
+        <td><%= link_to 'Destroy', player_character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Player Character', new_player_character_path %>

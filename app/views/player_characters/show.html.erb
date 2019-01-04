@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Character name:</strong>
+  <%= @player_character.character_name %>
+</p>
+
+<p>
+  <strong>Player name:</strong>
+  <%= @player_character.player_name %>
+</p>
+
+<p>
+  <strong>Ac:</strong>
+  <%= @player_character.ac %>
+</p>
+
+<p>
+  <strong>Hp:</strong>
+  <%= @player_character.hp %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <% if @player_character.image_data.present? %>
+    <%= image_tag @player_character.image_url(:large) %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_player_character_path(@player_character) %> |
+<%= link_to 'Back', player_characters_path %>
