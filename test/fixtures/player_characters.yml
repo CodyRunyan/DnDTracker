@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  character_name: MyString
+  player_name: MyString
+  ac: MyString
+  hp: 1
+  image_data: MyText
+
+two:
+  character_name: MyString
+  player_name: MyString
+  ac: MyString
+  hp: 1
+  image_data: MyText
