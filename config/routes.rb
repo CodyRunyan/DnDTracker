@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :combats
+  resources :encounters
   resources :player_characters
   root 'event#index'
 
