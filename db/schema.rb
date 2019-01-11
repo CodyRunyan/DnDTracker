@@ -10,18 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190111054412) do
-
-  create_table "combats", force: :cascade do |t|
-    t.integer "monster_id"
-    t.integer "player_character_id"
-    t.integer "encounter_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["encounter_id"], name: "index_combats_on_encounter_id"
-    t.index ["monster_id"], name: "index_combats_on_monster_id"
-    t.index ["player_character_id"], name: "index_combats_on_player_character_id"
-  end
+ActiveRecord::Schema.define(version: 20190111061626) do
 
   create_table "encounters", force: :cascade do |t|
     t.string "title"

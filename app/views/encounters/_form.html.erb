@@ -21,6 +21,16 @@
     <%= form.text_area :description, id: :encounter_description %>
   </div>
 
+  <div class="field">
+    <%= form.label :monster %>
+    <%= form.collection_select :monster, Monster.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_character %>
+    <%= form.collection_select :playercharacter, PlayerCharacter.all, :id, :character_name %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
