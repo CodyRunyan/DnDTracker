@@ -22,13 +22,15 @@
   </div>
 
   <div class="field">
-    <%= form.label :monster %>
-    <%= form.collection_select :monster, Monster.all, :id, :name %>
+    <%= form.label :monster_id %>
+    <%= form.collection_select :monster_id, Monster.all, :id, :name,
+    { include_blank: true } %>
   </div>
 
   <div class="field">
     <%= form.label :player_character %>
-    <%= form.collection_select :playercharacter, PlayerCharacter.all, :id, :character_name %>
+    <%= form.collection_select :playercharacter, PlayerCharacter.all, :id, :character_name, 
+    { include_blank: true } %>
   </div>
 
   <div class="actions">

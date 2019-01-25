@@ -1,5 +1,8 @@
 class PlayerCharacter < ApplicationRecord
-	belongs_to :encounters
+	has_many :encounter_pcs
+	has_many :encounters, through: :encounter_pcs
+
+	validates_presence_of :character_name, :player_name
 
 	before_destroy :ensure_not_referenced_by_any_encounter
 

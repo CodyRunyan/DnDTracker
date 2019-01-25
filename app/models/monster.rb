@@ -1,5 +1,8 @@
 class Monster < ApplicationRecord
-	belongs_to :encounters
+	has_many :monster_instances
+
+
+	validates_presence_of :name, :image_data
 
 	before_destroy :ensure_not_referenced_by_any_encounter
 
