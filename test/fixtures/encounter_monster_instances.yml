@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  encounter: one
+  monster_instance: one
+
+two:
+  encounter: two
+  monster_instance: two
