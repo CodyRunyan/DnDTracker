@@ -4,5 +4,5 @@ class Encounter < ApplicationRecord
 	has_many :monster_instances, through: :encounter_monster_instances
 	has_many :player_characters, through: :encounter_pcs
 
-	#validates_presence_of :title, :description, :monster_instance_id, :player_character_id
+	validates_presence_of :title, :description
 end
