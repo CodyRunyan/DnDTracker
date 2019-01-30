@@ -58,3 +58,7 @@ gem 'shrine', '~> 2.6', '>= 2.6.1'
 gem "image_processing", "~> 1.0"
 
 gem 'rb-readline'
+
+gem 'bootstrap', '~> 4.2.1'
+
+gem 'jquery-rails'

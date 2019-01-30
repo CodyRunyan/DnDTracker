@@ -9,6 +9,19 @@
   </head>
 
   <body>
-    <%= yield %>
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="/">Events</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/monsters">Monsters</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/player_characters">Player Characters</a>
+  </li>
+</ul>
+  	<div class="container">
+    	<%= yield %>
+	</div>
   </body>
 </html>
